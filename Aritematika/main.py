@@ -3,34 +3,63 @@ wadah = []
 
 def rumus_deret(suku_pertama,beda,n):
 	#rumus deret aritematika n / 2 ( 2 . a + ( n - 1 ) . b)
-	q = n / 2
-	w = 2 * suku_pertama
-	e = n - 1
-	r = e * beda
-	t = w + r
-	hasil = q * t
-	print(f" Suku pertama / a : {suku_pertama}")
-	print(f" Beda / b : {beda}")
-	print(f"Sn = n / 2 ( 2 . a + ( n - 1 ) . b)")
-	print(f"S{n} = {n} / 2 ( 2 . {suku_pertama} + ( {n} - 1 ) . {beda} ) ")	
-	print(f"S{n} = {q} ( {w} + ( {e} ) . {beda} ) ")
-	print(f"S{n} = {q} ( {w} + {r} )")
-	print(f"S{n} = {q} . {t}")
-	print(f"S{n} = {hasil}")
-	round(hasil)
-	salah_ketik = True
-	while salah_ketik:
-		tanya_ulang = input("Kembali ke Menu? [Y/n]\nJawaban : ")
-		if tanya_ulang == "n" or tanya_ulang == "N":
-			salah_ketik = False
-			print(outro)
-			print("Sampai Jumpa, Jangan Lupa Balik Lagi :)")
-		elif tanya_ulang == "Y" or tanya_ulang == "y":
-			salah_ketik = False
-			home()
-		else:
-			salah_ketik = True
-			print("Salah Ketik")
+	if n % 2 == 0:	
+		q = n / 2
+		w = 2 * suku_pertama
+		e = n - 1
+		r = e * beda
+		t = w + r
+		hasil = q * t
+		print(f" Suku pertama / a : {suku_pertama}")
+		print(f" Beda / b : {beda}")
+		print(f"Sn = n / 2 ( 2 . a + ( n - 1 ) . b)")
+		print(f"S{n} = {n} / 2 ( 2 . {suku_pertama} + ( {n} - 1 ) . {beda} ) ")	
+		print(f"S{n} = {q} ( {w} + ( {e} ) . {beda} ) ")
+		print(f"S{n} = {q} ( {w} + {r} )")
+		print(f"S{n} = {q} . {t}")
+		print(f"S{n} = {hasil}")
+		round(hasil)
+		salah_ketik = True
+		while salah_ketik:
+			tanya_ulang = input("Kembali ke Menu? [Y/n]\nJawaban : ")
+			if tanya_ulang == "n" or tanya_ulang == "N":
+				salah_ketik = False
+				print(outro)
+				print("Sampai Jumpa, Jangan Lupa Balik Lagi :)")
+			elif tanya_ulang == "Y" or tanya_ulang == "y":
+				salah_ketik = False
+				home()
+			else:
+				salah_ketik = True
+				print("Salah Ketik")
+	else:
+		w = 2 * suku_pertama
+		e = n - 1
+		r = e * beda
+		t = w + r
+		hasil = n * t / 2
+		print(f" Suku pertama / a : {suku_pertama}")
+		print(f" Beda / b : {beda}")
+		print(f"Sn = n / 2 ( 2 . a + ( n - 1 ) . b)")
+		print(f"S{n} = {n} / 2 ( 2 . {suku_pertama} + ( {n} - 1 ) . {beda} ) ")	
+		print(f"S{n} = {n} / 2 ( {w} + ( {e} ) . {beda} ) ")
+		print(f"S{n} = {n} / 2 ( {w} + {r} )")
+		print(f"S{n} = {n} / 2 . {t}")
+		print(f"S{n} = {hasil}")
+		round(hasil)
+		salah_ketik = True
+		while salah_ketik:
+			tanya_ulang = input("Kembali ke Menu? [Y/n]\nJawaban : ")
+			if tanya_ulang == "n" or tanya_ulang == "N":
+				salah_ketik = False
+				print(outro)
+				print("Sampai Jumpa, Jangan Lupa Balik Lagi :)")
+			elif tanya_ulang == "Y" or tanya_ulang == "y":
+				salah_ketik = False
+				home()
+			else:
+				salah_ketik = True
+				print("Salah Ketik")
 
 
 def rumus_baris(suku_pertama,beda,n):
